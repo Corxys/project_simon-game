@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html>
+
+  <!-- HEAD -->
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/reset.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+
+    <!-- metadatas -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Simon Game">
+    <meta property="og:description" content="Le célèbre jeu de société électronique Simon, mais en ligne.">
+    <meta property="og:url" content="https://github.com/Corxys/simon-says">
+    <meta property="og:site_name" content="Simon Game">
+    <meta property="og:image" content="https://bit.ly/31Ksnsp">
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon_96x96.png">
+
+    <!-- styles -->
+    <link rel='stylesheet' href='/stylesheets/reset.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
   </head>
+
+  <!-- BODY -->
+
   <body>
+    <!-- navbar -->
+    <div class="container__navbar">
+      <img class="navbar__logo" src="/images/logo_simon-game.svg" />
+    </div>
+
+    <!-- game -->
+    <div class="container__game">
+      <!-- level counter of the player -->
+      <div class="container__counter">
+        <span class="container__counter--bold">0 / 0</span>
+        <br />
+        coups
+      </div>
+  
+      <!-- game instructions (turn of simon or player) -->
+      <div class="game__simon">C'est au tour de <span class="game__simon--bold">Simon</span> de jouer !</div>
+      
+      <div class="game__player">C'est à <span class="game__player--bold">vous</span> de jouer !</div>
+  
+      <!-- container for the cells -->
+      <div class="container__playground"></div>
     
-    <div class="container__playground"></div>
+      <!-- message when the user arrives on the site, or when he loose -->
+      <div class="container__message">
+        Cliquez sur le bouton pour commencer à jouer !
+      </div>
+
+      <!-- start button -->
+      <button class="button__start">COMMENCER</button>
+    </div>
+
+    <!-- footer -->
+    <footer class="container__footer">
+      <div class="footer__copyright">
+        <a href="http://jennblngr.com" target="_blank">JENNY-LEE BOULANGER</a> © 2021
+      </div>
+      <div class="footer__socials">
+        <a href="https://twitter.com/blngrjnn">
+          <img class="socials__ico" src="/images/ico_twitter.svg" alt="icon of social network Twitter">
+        </a>
+      </div>
+    </footer>
 
     <script src="/javascripts/scripts.js"></script>
   </body>

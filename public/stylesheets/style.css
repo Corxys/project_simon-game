@@ -1,9 +1,213 @@
+/* import */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700;800&display=swap');
+
+/* general */
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font: 14px "Dosis", Helvetica, Arial, sans-serif;
+  background-color: #131F2E;
+  color: #FFFFFF;
 }
 
-.playground__cell {
-  width: 50px;
-  height: 50px;
+/* navbar */
+
+.container__navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100px;
+  width: 100vw;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.navbar__logo {
+  height: 30px;
+  margin-right: 15px;
+}
+
+/* footer */
+
+.container__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.footer__copyright a {
+  transition: 0.2s color;
+}
+
+.footer__copyright a:hover {
+  color: #ccddee;
+}
+
+@media all and (max-device-width: 480px) {
+  .footer {
+    justify-content: center;
+  }
+}
+
+.footer__socials {
+  margin-left: 20px;
+}
+
+.socials__ico {
+  height: 17px;
+  color: #ffffff;
+}
+
+/* start button */
+
+.button__start {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translate(-50%, 0px);
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: #6C90B466;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+}
+
+.button__start:hover {
+  background-color: #ccddee66;
+}
+
+/* message container */
+
+.container__message {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 140px;
+  transform: translate(-50%, 0px);
+}
+
+/* game container */
+
+.container__game {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 200px);
+}
+
+/* game informations (simon/player turn, counter) */
+
+.game__simon, .game__player {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  width: 50vw;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.game__simon {
+  left: 0px;
+  padding-right: 157px;
+}
+
+.game__player {
+  right: 0px;
+  padding-left: 157px;
+}
+
+.game__simon--bold, .game__player--bold, .container__counter--bold {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.container__counter {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  transform: translate(-50%, 0px);
+  text-align: center;
+}
+
+/* container cells */
+
+.container__playground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 315px;
+  height: 315px;
+  border-radius: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* wrapper cell */
+
+.playground__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* cell */
+
+.wrapper__cell {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.green {
+  border-radius: 200px 0px 0px 0px;
+}
+
+.green--active {
+  background: #00746a !important;
+}
+
+.red {
+  border-radius: 0px 200px 0px 0px;
+}
+
+.red--active {
+  background: #7c3738 !important;
+}
+
+.yellow {
+  border-radius: 0px 0px 0px 200px;
+}
+
+.yellow--active {
+  background: #7e7641 !important;
+}
+
+.blue {
+  border-radius: 0px 0px 200px 0px;
+}
+
+.blue--active {
+  background: #00576b !important;
 }
