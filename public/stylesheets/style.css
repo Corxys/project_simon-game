@@ -80,7 +80,7 @@ body {
 .button__start {
   position: absolute;
   left: 50%;
-  bottom: 80px;
+  bottom: 0px;
   transform: translate(-50%, 0px);
   padding: 12px 15px;
   border-radius: 8px;
@@ -99,8 +99,9 @@ body {
   display: block;
   position: absolute;
   left: 50%;
-  bottom: 140px;
+  bottom: 10%;
   transform: translate(-50%, 0px);
+  text-align: center;
 }
 
 /* game container */
@@ -143,7 +144,7 @@ body {
   display: none;
   position: absolute;
   left: 50%;
-  top: 80px;
+  top: 0%;
   transform: translate(-50%, 0px);
   text-align: center;
 }
@@ -210,4 +211,58 @@ body {
 
 .blue--active {
   background: #00576b !important;
+}
+
+@media all and (max-device-width: 600px) {
+  .container__footer {
+    justify-content: center;
+  }
+
+  .game__simon, .game__player {
+    top: 90%;
+    padding: 0px;
+  }
+
+  .container__playground {
+    width: 275px;
+    height: 275px;
+  }
+
+  .wrapper__cell {
+    width: 130px;
+    height: 130px;
+    border-radius: 5px;
+  }
+
+  .green {
+    border-radius: 200px 0px 0px 0px;
+  }
+  
+  .green--active {
+    background: #00746a !important;
+  }
+  
+  .red {
+    border-radius: 0px 200px 0px 0px;
+  }
+  
+  .red--active {
+    background: #7c3738 !important;
+  }
+  
+  .yellow {
+    border-radius: 0px 0px 0px 200px;
+  }
+  
+  .yellow--active {
+    background: #7e7641 !important;
+  }
+  
+  .blue {
+    border-radius: 0px 0px 200px 0px;
+  }
+  
+  .blue--active {
+    background: #00576b !important;
+  }
 }
